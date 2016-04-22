@@ -1,0 +1,41 @@
+# E L A S T I C S E A R C H - D A T A ------------------------------------------
+elasticsearchdata:
+  image: busybox
+  command: /bin/true
+  volumes:
+    - /usr/share/elasticsearch/data
+
+# E L A S T I C S E A R C H ----------------------------------------------------
+elasticsearch:
+  image: epages/ng-elasticsearch
+  hostname: elasticsearch
+  mem_limit: 512m
+  volumes_from:
+    - elasticsearchdata
+  ports:
+    - "9200:9200"
+    - "9300:9300"
+  command:
+    ["elasticsearch", "-Des.cluster.name=es-order-geo-stats", "-Des.node.name=es-order-geo-stats-master", "-Des.index.number_of_shards=1", "-Des.index.number_of_replicas=0"]
+
+# K I B A N A ------------------------------------------------------------------
+kibana:
+  image: epages/ng-kibana
+  mem_limit: 512m
+  links:
+      - elasticsearch
+  ports:
+    - "5601:5601"
+  environment:
+    - ELASTICSEARCH_URL=http://elasticsearch:9200
+
+# G E O S E R V E R ------------------------------------------------------------------
+geoserver:
+  image: epages/geoserver:2.8
+  links:
+    - elasticsearch
+  mem_limit: 512m
+  ports:
+    - "8080:8080"
+  environment:
+    - GEOSERVER_XSTREAM_WHITELIST=mil.nga.giat.data.elasticsearch.ElasticAttribute
