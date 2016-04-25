@@ -1,0 +1,92 @@
+{
+  "results": 1,
+  "page": 1,
+  "resultsPerPage": 10,
+  "items": [
+    {
+      "orderId": "5704208B-1DED-0DB1-312D-0A0C05E643DB",
+      "orderNumber": "1001",
+      "creationDate": "2016-04-05T20:31:07.000Z",
+      "customerId": "5704208B-257E-EECD-59E3-0A0C05E643E9",
+      "customerNumber": "1000",
+      "locale": null,
+      "currencyId": "GBP",
+      "taxModel": "GROSS",
+      "grandTotal": "41.24",
+      "totalBeforeTax": "34.37",
+      "totalTax": "6.87",
+      "customerComment": null,
+      "internalNote": null,
+      "billingAddress": {
+        "company": null,
+        "salutation": null,
+        "firstName": "Some",
+        "lastName": "Some",
+        "street": "Pilatuspool 2",
+        "streetDetails": null,
+        "zipCode": "22305",
+        "city": "Hamburg",
+        "state": null,
+        "country": "DE",
+        "title": null,
+        "vatId": null,
+        "birthday": null,
+        "emailAddress": "mw@e.de"
+      },
+      "shippingAddress": null,
+      "shippingData": {
+        "shippingMethod": {
+          "id": "5570E94E-0D5A-B19F-5051-0A0C05E64A7F",
+          "name": "Standard delivery"
+        },
+        "price": {
+          "taxType": "GROSS",
+          "formatted": "£7.06",
+          "amount": 7.06,
+          "currency": "GBP"
+        }
+      },
+      "paymentData": {
+        "paymentMethod": {
+          "id": "5570E94E-DA5C-BB2C-2522-0A0C05E64A0B",
+          "name": "Payment in advance"
+        },
+        "price": {
+          "taxType": "GROSS",
+          "formatted": "£0.00",
+          "amount": 0,
+          "currency": "GBP"
+        }
+      },
+      "viewedOn": null,
+      "rejectedOn": null,
+      "inProcessOn": null,
+      "pendingOn": null,
+      "readyForDispatchOn": null,
+      "partialyDispatchedOn": null,
+      "dispatchedOn": null,
+      "deliveredOn": null,
+      "partialyInvoicedOn": null,
+      "invoicedOn": null,
+      "partialyPaidOn": null,
+      "paidOn": null,
+      "returnedOn": null,
+      "closedOn": null,
+      "archivedOn": null,
+      "links": [
+        {
+          "rel": "self",
+          "href": "https://sandbox.epages.com/rs/shops/EpagesDevD20150703T163624R115/orders/5704208B-1DED-0DB1-312D-0A0C05E643DB"
+        },
+        {
+          "rel": "customer",
+          "href": "https://sandbox.epages.com/rs/shops/EpagesDevD20150703T163624R115/customers/5704208B-257E-EECD-59E3-0A0C05E643E9"
+        },
+        {
+          "rel": "shipping-method",
+          "href": "https://sandbox.epages.com/rs/shops/EpagesDevD20150703T163624R115/shipping-methods/5570E94E-0D5A-B19F-5051-0A0C05E64A7F"
+        }
+      ]
+    }
+  ]
+}
